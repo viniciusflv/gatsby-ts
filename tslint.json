@@ -1,0 +1,132 @@
+{
+  "defaultSeverity": "warning",
+  "extends": ["tslint-eslint-rules", "tslint:latest", "tslint-react"],
+  "jsRules": {},
+  "linterOptions": {
+    "exclude": ["node_modules/**", "**/*.d.ts", "*.js", "*.ts"]
+  },
+  "rules": {
+    "no-console": false,
+    "object-curly-spacing": "always",
+    "defaultSeverity": "warning",
+    "no-eval": true,
+    "no-internal-module": true,
+    "no-unsafe-finally": true,
+    "no-namespace": [true, "allow-declarations"],
+    "variable-name": [true, "ban-keywords"],
+    "no-submodule-imports": false,
+    "interface-name": false,
+    "jsx-no-lambda": false,
+    "jsx-no-multiline-js": false,
+    "class-name": true,
+    "prefer-const": true,
+    "triple-equals": true,
+    "no-var-keyword": true,
+    "no-unused-variable": [true, { "ignore-pattern": "^_" }],
+    "prefer-object-spread": true,
+    "import-spacing": true,
+    "no-async-without-await": true,
+    "no-shadowed-variable": true,
+    "arrow-parens": [true, "as-needed"],
+    "arrow-return-shorthand": true,
+    "newline-per-chained-call": false,
+    "type-literal-delimiter": true,
+    "unnecessary-else": true,
+    "no-unnecessary-callback-wrapper": true,
+    "no-unnecessary-initializer": true,
+    "eofline": true,
+    "object-literal-shorthand": true,
+    "newline-before-return": false,
+    "no-consecutive-blank-lines": true,
+    "no-irregular-whitespace": true,
+    "no-trailing-whitespace": true,
+    "object-literal-sort-keys": false,
+    "comment-format": [true, "check-space"],
+    "semicolon": [true, "always"],
+    "quotemark": [true, "single", "jsx-single"],
+    "curly": [true, "ignore-same-line"],
+    "object-literal-key-quotes": [true, "as-needed"],
+    "indent": [true, "spaces", 2],
+    "one-line": [true, "check-open-brace", "check-whitespace"],
+    "max-line-length": [true, 150],
+    "array-type": [true, "generic"],
+    "max-file-line-count": [true, 200],
+    "trailing-comma": [
+      true,
+      {
+        "multiline": {
+          "functions": "never",
+          "typeLiterals": "ignore"
+        },
+        "esSpecCompliant": true
+      }
+    ],
+    "typedef-whitespace": [
+      true,
+      {
+        "call-signature": "nospace",
+        "index-signature": "nospace",
+        "parameter": "nospace",
+        "property-declaration": "nospace",
+        "variable-declaration": "nospace"
+      }
+    ],
+    "align": [
+      true,
+      "parameters",
+      "arguments",
+      "statements",
+      "members",
+      "elements"
+    ],
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-operator",
+      "check-module",
+      "check-separator",
+      "check-rest-spread",
+      "check-type",
+      "check-typecast",
+      "check-type-operator",
+      "check-preblock"
+    ],
+    "ordered-imports": [
+      true,
+      {
+        "import-sources-order": "case-insensitive",
+        "named-imports-order": "case-insensitive",
+        "grouped-imports": true,
+        "groups": [
+          {
+            "name": "react",
+            "match": "^react*",
+            "order": 1
+          },
+          {
+            "name": "redux",
+            "match": "^redux*",
+            "order": 2
+          },
+          {
+            "name": "sibling dir",
+            "match": "^./",
+            "order": 4
+          },
+          {
+            "name": "relative dir",
+            "match": "^[.].*",
+            "order": 5
+          },
+          {
+            "name": "node_modules",
+            "match": ".*",
+            "order": 3
+          }
+        ]
+      }
+    ]
+  },
+  "rulesDirectory": []
+}
