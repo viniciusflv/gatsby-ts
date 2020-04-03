@@ -17,15 +17,13 @@ module.exports = {
     titles: [
       ['/', 'Home'],
       ['/blog/', 'Blog'],
-      ['/blog/gatsby/', 'Blog gatsby'],
-      ['/blog/react/', 'Blog react'],
     ],
   },
   plugins: [
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
-        color: `#fa4616`,
+        color: `#00FF41`,
         showSpinner: false,
       },
     },
@@ -35,10 +33,10 @@ module.exports = {
         name: `GatsbyJS`,
         short_name: `GatsbyJS`,
         start_url: `/`,
-        background_color: `#fa4616`,
-        theme_color: `#fa4616`,
+        background_color: `#00FF41`,
+        theme_color: `#00FF41`,
         display: `standalone`,
-        icon: './static/logo.png',
+        icon: './static/vini.svg',
       },
     },
     {
@@ -46,11 +44,11 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Oswald`,
-            subsets: [`latin`],
+            family: `Raleway`,
+            variants: [`400`, `700`],
           },
           {
-            family: `Open Sans`,
+            family: `Montserrat`,
             variants: [`400`, `700`],
           },
         ],
@@ -101,9 +99,69 @@ module.exports = {
               linkImagesToOriginal: false,
             },
           },
-          `gatsby-remark-lazy-load`
+          `gatsby-remark-lazy-load`,
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false,
+              languageExtensions: [
+                {
+                  language: "superscript",
+                  extend: "javascript",
+                  definition: {
+                    superscript_types: /(SuperType)/,
+                  },
+                  insertBefore: {
+                    function: {
+                      superscript_keywords: /(superif|superelse)/,
+                    },
+                  },
+                },
+              ],
+              prompt: {
+                user: "root",
+                host: "localhost",
+                global: false,
+              },
+              escapeEntities: {},
+            },
+          },
         ],
       },
+    },
+    {
+      resolve: 'gatsby-plugin-minify-html',
+      options: {
+        debug: true,
+        config: {
+          caseSensitive: true,
+          collapseBooleanAttributes: true,
+          collapseInlineTagWhitespace: true,
+          collapseWhitespace: true,
+          conservativeCollapse: true,
+          continueOnParseError: true,
+          decodeEntities: true,
+          html5: true,
+          minifyCSS: true,
+          minifyJS: true,
+          minifyURLs: true,
+          preventAttributesEscaping: true,
+          removeComments: true,
+          removeEmptyAttributes: true,
+          removeRedundantAttributes: true,
+          removeScriptTypeAttributes: true,
+          removeStyleLinkTypeAttributes: true,
+          removeTagWhitespace: true,
+          sortAttributes: true,
+          sortClassName: true,
+          trimCustomFragments: true,
+          useShortDoctype: true,
+        }
+      }
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-robots-txt`,

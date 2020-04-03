@@ -1,25 +1,25 @@
-import React, { memo, useState } from 'react';
+import React, { memo } from 'react';
 
-import styled from 'styled-components';
+import { useTheme } from 'styled-components';
 
 import assets from '../../assets';
-
-const Div = styled.div`
-  max-width: 100%;
-  max-height: 100%;
-  ${({ theme }) => `fill: ${theme.color}`}
-`;
+import { Flex } from '../Core/Flex';
+import { Text } from '../Core/Text';
+import { TextTypes } from '../Core/Text/interface';
 
 export default memo(() => {
   const { viewBox, fill, paths } = assets('person');
+  const { toggleTheme } = useTheme() as any;
 
   return (
-    <Div>
-      <svg viewBox={viewBox} fill={fill} width='100%' height='100%'>
-        {paths?.map((path) => (
-          <path key={path.d} {...path} />
-        ))}
-      </svg>
-    </Div>
+    <Flex direction='column'>
+      <Text text='HeadlineStyle' type={TextTypes.H1} />
+      <Text text='SubheadStyle' type={TextTypes.H2} />
+      <Text text='TitleStyle' type={TextTypes.H3} />
+      <Text text='SubtitleStyle' type={TextTypes.H4} />
+      <Text text='ParagraphStyle' type={TextTypes.P} />
+      <Text>aaa</Text>
+      <button onClick={toggleTheme}>Toggle</button>
+    </Flex>
   );
 });
