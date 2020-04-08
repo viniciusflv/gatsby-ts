@@ -16,6 +16,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     min-height: 100%;
     width: 100%;
     height: 100%;
+    background-color: ${({ theme }) => theme.primaryColor};
   }
 
   #___gatsby, #gatsby-focus-wrapper {
@@ -32,7 +33,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   }
 
   ::-webkit-scrollbar-track {
-    background-color: ${({ theme }) => theme.primaryColor};
+    background-color: rgba(0,0,0,.2);
   }
 
   ::-webkit-scrollbar-thumb {

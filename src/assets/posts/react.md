@@ -5,14 +5,14 @@ date: "25-03-2018"
 
 ## Setup for React
 
-## Setup for React
-
 ### Topics
 
 1. React
 
-```
-a
+```json
+{
+  "A": "a"
+}
 ```
 
 ```tsx
@@ -33,7 +33,11 @@ export const App: FC<{ a?: string }> = memo(({ children, a }) => {
   );
 });
 ```
+## Gatsby
 ![Gatsby](./images/gatsby.jpg)
+## GraphQL
 ![GraphQL](./images/graphql.png)
+## React
 ![React](./images/react.jpg)
+## Typescript
 ![Typescript](./images/typescript.jpeg)

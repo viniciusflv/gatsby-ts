@@ -21,7 +21,8 @@ export const Layout: FC<any> = memo(({ children, path }) => {
       <SEO path={path} />
       <TopBar />
       <Flex
-        maxWidth='1200px'
+        as='main'
+        minWidth='100%'
         minHeight='100% '
         width='100%'
         height='100%'
@@ -29,7 +30,6 @@ export const Layout: FC<any> = memo(({ children, path }) => {
         grow='2'
         padding='20px'
         margin='0 auto'
-        minWidth='100%'
       >
         {children}
       </Flex>

@@ -7,7 +7,7 @@ export const light: ThemeType = {
   subtitle: { size: '1rem', color: '#222222', weight: 'bold', family: 'Raleway, arial, sans-serif' },
   paragraph: { size: '.8rem', color: '#222222', weight: 'normal', family: 'Montserrat, arial, sans-serif' },
   span: { size: '12px', color: '#222222', weight: 'normal', family: 'Montserrat, arial, sans-serif' },
-  primaryColor: 'rgb(40,41,54)',
+  primaryColor: '#ffffff',
   secondaryColor: '#6272a4',
   backgroundColor: '#f0f0f0',
   code: {
