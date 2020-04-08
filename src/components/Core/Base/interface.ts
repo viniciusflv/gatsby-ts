@@ -1,4 +1,8 @@
-export type BaseProps<T = {}> = T & {
+export type BaseProps<T = {}> = T
+& React.HTMLAttributes<T>
+& {
+  as?: keyof JSX.IntrinsicElements | React.ComponentType<any>;
+  theme?: any;
   content?: string;
   grow?: string;
   outline?: string;

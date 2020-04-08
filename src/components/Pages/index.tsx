@@ -13,11 +13,11 @@ export default memo(() => {
 
   return (
     <Flex direction='column'>
-      <Text text='HeadlineStyle' type={TextTypes.H1} />
-      <Text text='SubheadStyle' type={TextTypes.H2} />
-      <Text text='TitleStyle' type={TextTypes.H3} />
-      <Text text='SubtitleStyle' type={TextTypes.H4} />
-      <Text text='ParagraphStyle' type={TextTypes.P} />
+      <Text text='Headline Style' type={TextTypes.H1} />
+      <Text text='Subhead Style' type={TextTypes.H2} />
+      <Text text='Title Style' type={TextTypes.H3} />
+      <Text text='Subtitle Style' type={TextTypes.H4} />
+      <Text text='Paragraph Style' type={TextTypes.P} />
       <Text>aaa</Text>
       <button onClick={toggleTheme}>Toggle</button>
     </Flex>

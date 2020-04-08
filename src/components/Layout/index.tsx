@@ -11,10 +11,26 @@ export const Layout: FC<any> = memo(({ children, path }) => {
   const { backgroundColor } = useTheme() as any;
 
   return (
-    <Grid backgroundColor={backgroundColor} width='100%' height='100%' rows='auto 1fr'>
+    <Grid
+      as='section'
+      backgroundColor={backgroundColor}
+      width='100%'
+      height='100%'
+      rows='60px 1fr'
+    >
       <SEO path={path} />
       <TopBar />
-      <Flex maxWidth='1200px' width='100%' height='100%' direction='column' grow='2' padding='20px' margin='0 auto'>
+      <Flex
+        maxWidth='1200px'
+        minHeight='100% '
+        width='100%'
+        height='100%'
+        direction='column'
+        grow='2'
+        padding='20px'
+        margin='0 auto'
+        minWidth='100%'
+      >
         {children}
       </Flex>
     </Grid>

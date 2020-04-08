@@ -13,6 +13,6 @@ export type ThemeType<T = {}> = T & {
   subtitle: TextThemeType;
   paragraph: TextThemeType;
   primaryColor: string;
-  secondarytColor: string;
+  secondaryColor: string;
   backgroundColor: string;
 };
