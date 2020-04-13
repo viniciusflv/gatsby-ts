@@ -21,7 +21,5 @@ export const wrapPageElement = ({
   props,
 }: WrapPageElementBrowserArgs | WrapPageElementNodeArgs) => {
   // @ts-ignore
-  return props.path
-    ? <Layout {...props}>{element}</Layout>
-    : element;
+  return props.path ? <Layout {...props}>{element}</Layout> : element;
 };

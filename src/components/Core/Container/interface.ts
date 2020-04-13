@@ -18,32 +18,33 @@ export interface Border extends XY<string> {
   radius?: BorderRadius | string;
 }
 
-export type ContainerProps<T = {}> = BaseProps<T
-& XY<string>
-& {
-    outline?: string;
-    position?: string;
-    transform?: string;
-    objectFit?: string;
-    area?: string;
-    height?: string;
-    minHeight?: string;
-    maxHeight?: string;
-    width?: string;
-    minWidth?: string;
-    maxWidth?: string;
-    fullWidth?: boolean;
-    overflow?: string;
-    color?: string;
-    backgroundImage?: string;
-    backgroundColor?: string;
-    boxShadow?: string;
-    font?: string;
-    borderCollapse?: string;
-    contain?: boolean;
-    align?: string;
-    borderRadius?: BorderRadius | string;
-    border?: Border | string;
-    margin?: XY<string> | string;
-    padding?: XY<string> | string;
-}>;
+export type ContainerProps<T = {}> = BaseProps<
+  T &
+    XY<string> & {
+      outline?: string;
+      position?: string;
+      transform?: string;
+      objectFit?: string;
+      area?: string;
+      height?: string;
+      minHeight?: string;
+      maxHeight?: string;
+      width?: string;
+      minWidth?: string;
+      maxWidth?: string;
+      fullWidth?: boolean;
+      overflow?: string;
+      color?: string;
+      backgroundImage?: string;
+      backgroundColor?: string;
+      boxShadow?: string;
+      font?: string;
+      borderCollapse?: string;
+      contain?: boolean;
+      align?: string;
+      borderRadius?: BorderRadius | string;
+      border?: Border | string;
+      margin?: XY<string> | string;
+      padding?: XY<string> | string;
+    }
+>;

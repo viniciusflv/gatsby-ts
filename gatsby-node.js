@@ -10,7 +10,11 @@ exports.onCreateNode = ({ node, actions: { createNodeField } }) => {
 
 exports.createPages = async ({ graphql, actions: { createPage } }) => {
   const blogPostTemplate = resolve(`src/components/Templates/Blog/index.tsx`);
-  const { data: { allMarkdownRemark: { edges } } } = await graphql(
+  const {
+    data: {
+      allMarkdownRemark: { edges },
+    },
+  } = await graphql(
     `
       query {
         allMarkdownRemark {
@@ -26,11 +30,17 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
     `
   );
 
-  edges.forEach(({ node: { fields: { slug } } }) => {
-    createPage({
-      path: `/blog/${slug}/`,
-      component: blogPostTemplate,
-      context: { slug },
-    });
-  })
+  edges.forEach(
+    ({
+      node: {
+        fields: { slug },
+      },
+    }) => {
+      createPage({
+        path: `/blog/${slug}/`,
+        component: blogPostTemplate,
+        context: { slug },
+      });
+    }
+  );
 };

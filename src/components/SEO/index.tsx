@@ -43,32 +43,29 @@ export const SEO: FC<{
       defer={false}
     >
       <title>{pageTitle}</title>
-      <meta content={pageTitle} property='og:title' />
-      <meta content={description ?? data?.description} name='description' />
-      <meta content={description ?? data?.description} itemProp='description' />
+      <meta content={pageTitle} property="og:title" />
+      <meta content={description ?? data?.description} name="description" />
+      <meta content={description ?? data?.description} itemProp="description" />
       <meta
         content={description ?? data?.description}
-        property='og:description'
+        property="og:description"
       />
-      <meta content={data?.keywords} name='keywords' />
-      <meta content={data?.author} name='author' />
-      <meta content={data?.siteName} itemProp='name' />
-      <meta content={data?.siteName} property='og:site_name' />
-      <meta content={data?.siteUrl} property='og:url' />
+      <meta content={data?.keywords} name="keywords" />
+      <meta content={data?.author} name="author" />
+      <meta content={data?.siteName} itemProp="name" />
+      <meta content={data?.siteName} property="og:site_name" />
+      <meta content={data?.siteUrl} property="og:url" />
+      <meta content={join(data?.siteUrl, data?.image?.path)} itemProp="image" />
       <meta
         content={join(data?.siteUrl, data?.image?.path)}
-        itemProp='image'
+        property="og:image"
       />
-      <meta
-        content={join(data?.siteUrl, data?.image?.path)}
-        property='og:image'
-      />
-      <meta content={data?.image?.type} property='og:image:type' />
-      <meta content={data?.image?.size} property='og:image:width' />
-      <meta content={data?.image?.size} property='og:image:height' />
-      <meta content={data?.locale} property='og:locale' />
-      <meta content='website' property='og:type' />
-      <meta content='index, follow' name='robots' />
+      <meta content={data?.image?.type} property="og:image:type" />
+      <meta content={data?.image?.size} property="og:image:width" />
+      <meta content={data?.image?.size} property="og:image:height" />
+      <meta content={data?.locale} property="og:locale" />
+      <meta content="website" property="og:type" />
+      <meta content="index, follow" name="robots" />
     </Helmet>
   );
 });

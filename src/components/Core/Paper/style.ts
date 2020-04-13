@@ -21,7 +21,7 @@ const getElevation = (ele: number) => {
   }
 };
 
-export const PaperStyle = styled(Flex).attrs((props) => ({
+export const PaperStyle = styled(Flex).attrs(props => ({
   backgroundColor: '#ffffff',
   borderRadius: '4px',
   ...props,

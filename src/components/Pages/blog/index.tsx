@@ -24,7 +24,7 @@ export default memo(() => {
 
   const data = edges.reduce((acc: any, { node: { frontmatter } }: any) => {
     return [...acc, frontmatter];
-  },                        []);
+  }, []);
 
   return (
     <div>

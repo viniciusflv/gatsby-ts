@@ -11,7 +11,7 @@ export class TopBarModels {
     const { primaryColor } = useTheme() as any;
     this.HeaderModel = {
       as: 'header',
-      id: 'aaa'
+      id: 'aaa',
     };
     this.FixedModel = {
       alignItems: 'center',
@@ -22,7 +22,7 @@ export class TopBarModels {
       // backgroundImage: 'linear-gradient(90deg, #008F11 0%, rgba(0,44,53,0) 50%, #008F11 100%);',
       borderRadius: 'none',
       elevation: 2,
-      zIndex: '666'
+      zIndex: '666',
     };
     this.NavModel = {
       as: 'nav',

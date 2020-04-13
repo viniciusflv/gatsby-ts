@@ -10,13 +10,10 @@ export const Theme = memo(({ children }) => {
   const applyThemeSwitcher = (theme: any) => ({ ...theme, toggleTheme });
 
   const hour = new Date().getHours();
-  const themes = (hour > 17 || hour < 9)
-    ? (toggle ? dark : light)
-    : (toggle ? light : dark);
+  const themes =
+    hour > 17 || hour < 9 ? (toggle ? dark : light) : toggle ? light : dark;
 
   return (
-    <ThemeProvider theme={applyThemeSwitcher(themes)}>
-      {children}
-    </ThemeProvider>
+    <ThemeProvider theme={applyThemeSwitcher(themes)}>{children}</ThemeProvider>
   );
 });

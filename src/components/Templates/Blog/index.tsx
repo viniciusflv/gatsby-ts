@@ -31,11 +31,11 @@ export default memo(
   }: any) => {
     return (
       <Flex
-        direction='column'
-        grow='2'
-        maxWidth='1200px'
-        width='100%'
-        margin='auto'
+        direction="column"
+        grow="2"
+        maxWidth="1200px"
+        width="100%"
+        margin="auto"
       >
         <SEO title={title} />
         <Text text={title} type={TextTypes.H1} />

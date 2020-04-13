@@ -61,7 +61,7 @@ const CodeStyle = styled.section`
     fill: ${({ theme }) => theme.secondaryColor};
     background: ${({ theme }) => theme.code.backgroundColor};
     :active {
-      opacity: .5;
+      opacity: 0.5;
     }
     :after {
       display: none !important;

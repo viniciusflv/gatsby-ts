@@ -7,10 +7,10 @@
   "scripts": {
     "build": "npm run clean && gatsby build",
     "dev": "npm run clean && cross-env GATSBY_GRAPHQL_IDE=playground gatsby develop",
-    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,svg}\"",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "svg": "npx svgson-cli src/assets/svg --output src/assets/vectors.json --pretty",
+    "svg": "node $(pwd)/scripts/svgson.js $(pwd)/src/assets/svg",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
@@ -44,7 +44,9 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "6.0.0-beta",
-    "styled-components": "5.0.1"
+    "styled-components": "5.0.1",
+    "svgo": "^1.3.2",
+    "svgson": "^4.0.0"
   },
   "devDependencies": {
     "@types/react": "^16.9.23",

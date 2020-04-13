@@ -1,6 +1,6 @@
 ---
-title: "Blog React"
-date: "25-03-2018"
+title: 'Blog React'
+date: '25-03-2018'
 ---
 
 ## Setup for React
@@ -33,11 +33,19 @@ export const App: FC<{ a?: string }> = memo(({ children, a }) => {
   );
 });
 ```
+
 ## Gatsby
+
 ![Gatsby](./images/gatsby.jpg)
+
 ## GraphQL
+
 ![GraphQL](./images/graphql.png)
+
 ## React
+
 ![React](./images/react.jpg)
+
 ## Typescript
+
 ![Typescript](./images/typescript.jpeg)

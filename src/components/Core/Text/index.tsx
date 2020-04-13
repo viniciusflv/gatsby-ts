@@ -8,8 +8,10 @@ export const Text: FC<TextProps> = memo(
     const Tag = TextStyles[type];
     const content = children ?? text;
 
-    return typeof content === 'string'
-      ? <Tag dangerouslySetInnerHTML={{ __html: content }} {...props} />
-      : <Tag {...props}>{content}</Tag>;
+    return typeof content === 'string' ? (
+      <Tag dangerouslySetInnerHTML={{ __html: content }} {...props} />
+    ) : (
+      <Tag {...props}>{content}</Tag>
+    );
   }
 );

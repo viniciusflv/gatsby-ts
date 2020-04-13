@@ -12,24 +12,24 @@ export const Layout: FC<any> = memo(({ children, path }) => {
 
   return (
     <Grid
-      as='section'
+      as="section"
       backgroundColor={backgroundColor}
-      width='100%'
-      height='100%'
-      rows='60px 1fr'
+      width="100%"
+      height="100%"
+      rows="60px 1fr"
     >
       <SEO path={path} />
       <TopBar />
       <Flex
-        as='main'
-        minWidth='100%'
-        minHeight='100% '
-        width='100%'
-        height='100%'
-        direction='column'
-        grow='2'
-        padding='20px'
-        margin='0 auto'
+        as="main"
+        minWidth="100%"
+        minHeight="100% "
+        width="100%"
+        height="100%"
+        direction="column"
+        grow="2"
+        padding="20px"
+        margin="0 auto"
       >
         {children}
       </Flex>
