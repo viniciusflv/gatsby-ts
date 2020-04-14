@@ -4,6 +4,7 @@ import { useTheme } from 'styled-components';
 
 import assets from '../../assets';
 import { Flex } from '../Core/Flex';
+import { IconText } from '../Core/IconText';
 import { Svg } from '../Core/Svg';
 import { Text } from '../Core/Text';
 import { TextTypes } from '../Core/Text/interface';
@@ -24,7 +25,17 @@ export default memo(() => {
           <Svg key={key} vector={key} height='50px' width='50px' />
         ))}
       </Flex>
-      <button onClick={toggleTheme}>Toggle</button>
+      <Flex>
+        <IconText
+          direction='column'
+          color='blue'
+          fill='red'
+          text='IconText'
+          size={1}
+          first={'person'}
+          last={'person'}
+        />
+      </Flex>
     </Flex>
   );
 });

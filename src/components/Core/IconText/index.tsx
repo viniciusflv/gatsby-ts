@@ -1,13 +1,28 @@
-import React, { memo } from 'react';
+import React, { FC, memo } from 'react';
 
-import { FirstIconStyle, FlexStyle, LastIconStyle, TextStyle } from './style';
+import { IconTextProps } from './interface';
+import { IconTextModel } from './model';
+import {
+  FirstIconStyle,
+  LastIconStyle,
+  TextStyle,
+  WrapperStyle,
+} from './style';
 
-export const IconText = memo(() => {
+export const IconText: FC<IconTextProps> = memo((props) => {
+  const { first, last } = props;
+  const {
+    WrapperModel,
+    FirstIconModel,
+    TextModel,
+    LastIconModel,
+  } = new IconTextModel(props);
+
   return (
-    <FlexStyle>
-      <FirstIconStyle vector='agibank' />
-      <TextStyle text='aaa' />
-      {/* <LastIconStyle vector={VectorTypes.} /> */}
-    </FlexStyle>
+    <WrapperStyle {...WrapperModel}>
+      {first && <FirstIconStyle {...FirstIconModel} />}
+      <TextStyle {...TextModel} />
+      {last && <LastIconStyle {...LastIconModel} />}
+    </WrapperStyle>
   );
 });

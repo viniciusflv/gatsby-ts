@@ -48,9 +48,11 @@ export const Svg: FC<SvgProps> = memo(({ vector, color, ...flexProps }) => {
           <path
             {...path}
             key={JSON.stringify(path)}
-            fill={
-              Boolean(linearGradient || radialGradient) ? `url(#${id})` : fill
-            }
+            fill={color || (
+              Boolean(linearGradient || radialGradient)
+                ? `url(#${id})`
+                : fill
+            )}
           >
             {animates && renderAnimation(animates)}
           </path>

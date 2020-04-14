@@ -51,7 +51,10 @@ export const TextStyle = styled(Container).attrs({ as: 'span' })<TextProps>`
   `}
 `;
 
-export const SpanStyle = styled(TextStyle).attrs(({ theme }) => theme.span)``;
+export const SpanStyle = styled(TextStyle).attrs(({ theme, ...props }) => ({
+  ...theme.span,
+  ...props,
+}))``;
 
 export const H1Style = styled(SpanStyle).attrs(({ theme }) => ({
   ...theme.headline,

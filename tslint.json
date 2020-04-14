@@ -1,5 +1,5 @@
 {
-  "defaultSeverity": "warning",
+  // "defaultSeverity": "warning",
   "extends": ["tslint-eslint-rules", "tslint:latest", "tslint-react"],
   "jsRules": {},
   "linterOptions": {

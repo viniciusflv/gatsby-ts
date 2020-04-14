@@ -36,9 +36,8 @@ const svgo = new SVGO({
         convertArcs: true,
       },
     },
-    // { sortAttrs: true },
-    // { removeDimensions: true },
-    // { removeAttrs: { attrs: '(stroke|fill)' } },
+    { sortAttrs: true },
+    { removeDimensions: true },
   ],
 });
 
