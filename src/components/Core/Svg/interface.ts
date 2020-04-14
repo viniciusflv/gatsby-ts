@@ -1,4 +1,5 @@
 import assets from '../../../assets';
+import { FlexProps } from '../Flex/interface';
 
 export interface Stop {
   offset: string;
@@ -6,7 +7,6 @@ export interface Stop {
 }
 
 export interface Gradient {
-  type: string;
   stops: Array<Stop>;
 }
 
@@ -22,18 +22,19 @@ export interface Animate {
 export interface Path {
   d: string;
   fill?: string;
-  gradient?: Gradient;
-  animate?: Animate;
+  animates?: Array<Animate>;
 }
 
 export interface SvgAsset {
   paths: Array<Path>;
   viewBox: string;
   fill?: string;
+  linearGradient?: Gradient;
+  radialGradient?: Gradient;
 }
 
 export type VectorTypes = keyof typeof assets;
-export interface SvgProps {
+export interface SvgProps extends FlexProps {
   vector: VectorTypes;
   color?: string;
 }

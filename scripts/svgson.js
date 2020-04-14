@@ -4,7 +4,6 @@ const { parse } = require('svgson');
 const SVGO = require('svgo');
 const svgo = new SVGO({
   plugins: [
-    { cleanupAttrs: true },
     { removeDoctype: true },
     { removeXMLProcInst: true },
     { removeComments: true },
@@ -17,9 +16,7 @@ const svgo = new SVGO({
     { removeHiddenElems: true },
     { removeEmptyText: true },
     { removeEmptyContainers: true },
-    { removeViewBox: false },
     { cleanupEnableBackground: true },
-    { convertEllipseToCircle: true },
     { convertStyleToAttrs: true },
     { convertColors: true },
     { convertPathData: true },
@@ -30,19 +27,18 @@ const svgo = new SVGO({
     { removeUnusedNS: true },
     { cleanupIDs: true },
     { cleanupNumericValues: true },
-    { moveElemsAttrsToGroup: true },
     { moveGroupAttrsToElems: true },
     { collapseGroups: true },
-    { removeRasterImages: false },
+    { removeRasterImages: true },
     { mergePaths: true },
     {
       convertShapeToPath: {
         convertArcs: true,
       },
     },
-    { sortAttrs: true },
-    { removeDimensions: true },
-    { removeAttrs: { attrs: '(stroke|fill)' } },
+    // { sortAttrs: true },
+    // { removeDimensions: true },
+    // { removeAttrs: { attrs: '(stroke|fill)' } },
   ],
 });
 
@@ -83,8 +79,11 @@ async function parseToJson(fileName) {
       encoding: 'utf8',
     })
   );
-  console.log(data);
-  const { viewBox, fill, children } = await parse(data);
+
+  const {
+    attributes: { viewBox, fill },
+    children,
+  } = await parse(data, { camelcase: true });
 
   return {
     viewBox,

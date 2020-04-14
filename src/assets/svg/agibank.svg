@@ -10,7 +10,7 @@
   >
     <animate
       fill="freeze"
-      begin="0s"
+      begin="1s"
       dur="1s"
       repeatCount="1"
       attributeName="d"
@@ -23,7 +23,7 @@
   >
     <animate
       fill="freeze"
-      begin="0s"
+      begin="1s"
       dur="1s"
       repeatCount="1"
       attributeName="d"
@@ -36,7 +36,7 @@
   >
     <animate
       fill="freeze"
-      begin="0s"
+      begin="1s"
       dur="1s"
       repeatCount="1"
       attributeName="d"

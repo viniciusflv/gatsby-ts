@@ -2,6 +2,7 @@ import React, { memo } from 'react';
 
 import { useTheme } from 'styled-components';
 
+import assets from '../../assets';
 import { Flex } from '../Core/Flex';
 import { Svg } from '../Core/Svg';
 import { Text } from '../Core/Text';
@@ -18,7 +19,11 @@ export default memo(() => {
       <Text text='Subtitle Style' type={TextTypes.H4} />
       <Text text='Paragraph Style' type={TextTypes.P} />
       <Text>aaa</Text>
-      <Svg vector='agibank' width='200px' />
+      <Flex gap='20px' wrap='wrap'>
+        {Object.keys(assets).map<any>((key: any) => (
+          <Svg key={key} vector={key} height='50px' width='50px' />
+        ))}
+      </Flex>
       <button onClick={toggleTheme}>Toggle</button>
     </Flex>
   );
