@@ -23,7 +23,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
-        color: `#00FF41`,
+        color: `#ae81ff`,
         showSpinner: false,
       },
     },
@@ -33,10 +33,10 @@ module.exports = {
         name: `GatsbyJS`,
         short_name: `GatsbyJS`,
         start_url: `/`,
-        background_color: `#00FF41`,
-        theme_color: `#00FF41`,
+        background_color: `#ae81ff`,
+        theme_color: `#ae81ff`,
         display: `standalone`,
-        icon: './static/vini.svg',
+        icon: `${__dirname}/src/assets/svg/vini.svg`,
       },
     },
     {
@@ -75,7 +75,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-page-creator`,
       options: {
-        path: `./src/components/Pages`,
+        path: `${__dirname}/src/components/Pages`,
         ignore: [`**/*.!(tsx)`],
       },
     },
@@ -83,7 +83,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `posts`,
-        path: `./src/assets/posts`,
+        path: `${__dirname}/src/assets/posts`,
       },
     },
     `gatsby-plugin-sharp`,
@@ -91,12 +91,7 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          {
-            resolve: `gatsby-remark-code-buttons`,
-            options: {
-              tooltipText: `Copiar`,
-            },
-          },
+          `gatsby-remark-code-buttons`,
           `gatsby-remark-relative-images`,
           {
             resolve: `gatsby-remark-images`,
@@ -113,6 +108,16 @@ module.exports = {
             },
           },
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        path: `${__dirname}/src/assets/lang`,
+        languages: [`en`, `pt`],
+        defaultLanguage: `en`,
+        redirect: true,
+        // redirectComponent: require.resolve(`${__dirname}/src/components/redirect.js`),
       },
     },
     {
@@ -138,8 +143,6 @@ module.exports = {
           removeScriptTypeAttributes: true,
           removeStyleLinkTypeAttributes: true,
           removeTagWhitespace: true,
-          sortAttributes: true,
-          sortClassName: true,
           trimCustomFragments: true,
           useShortDoctype: true,
         },

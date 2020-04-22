@@ -1,11 +1,12 @@
 ---
 title: 'Blog React'
 date: '25-03-2018'
+lang: 'pt'
 ---
 
-## Setup for React
+## Configurando o React
 
-### Topics
+### Tópicos
 
 1. React
 

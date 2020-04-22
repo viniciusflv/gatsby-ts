@@ -37,13 +37,13 @@ export const light: ThemeType = {
     weight: 'normal',
     family: 'Montserrat, arial, sans-serif',
   },
-  primaryColor: '#ffffff',
+  primaryColor: '#ae81ff',
   secondaryColor: '#6272a4',
   backgroundColor: '#f0f0f0',
   code: {
     size: '1rem',
     family:
-      "'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;",
+      '\'Fira Code\', Consolas, Monaco, \'Andale Mono\', \'Ubuntu Mono\', monospace;',
     boxShadow: '0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)',
     color: 'rgb(40,41,54)',
     backgroundColor: '#ffffff',
@@ -102,7 +102,7 @@ export const dark: ThemeType = {
   code: {
     size: '1rem',
     family:
-      "'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;",
+      '\'Fira Code\', Consolas, Monaco, \'Andale Mono\', \'Ubuntu Mono\', monospace;',
     boxShadow: '0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)',
     color: '#f8f8f2',
     backgroundColor: 'rgb(40,41,54)',
