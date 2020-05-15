@@ -30,16 +30,6 @@ export default memo(
       },
     },
   }: any) => {
-    const [locale, setLocale] = useState(useIntl().locale);
-
-    useEffect(() => {
-      changeLocale(locale);
-    },        [locale]);
-
-    function toggleLocale() {
-      setLocale(locale === 'pt' ? 'en' : 'pt');
-    }
-
     return (
       <Flex
         direction='column'
@@ -49,7 +39,6 @@ export default memo(
         margin='auto'
       >
         <SEO title={title} />
-        <button onClick={toggleLocale}>Toggle Locale</button>
         <Text text={title} type={TextTypes.H1} />
         <Text text={date} type={TextTypes.P} />
         <Markdown html={html} />

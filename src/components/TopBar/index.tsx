@@ -7,14 +7,14 @@ import { TopBarModels } from './model';
 import { FixedStyle, HeaderStyle, NavStyle } from './style';
 
 export const TopBar = memo(() => {
-  const [locale, setLocale] = useState(useIntl().locale);
+  // const [locale, setLocale] = useState(useIntl().locale);
   const { toggleTheme } = useTheme() as any;
   const { FixedModel, HeaderModel, NavModel } = new TopBarModels();
 
-  useEffect(() => { changeLocale(locale); }, [locale]);
+  // useEffect(() => { changeLocale(locale); }, [locale]);
 
   function toggleLocale() {
-    setLocale(locale === 'pt' ? 'en' : 'pt');
+    // setLocale(locale === 'pt' ? 'en' : 'pt');
   }
 
   return (

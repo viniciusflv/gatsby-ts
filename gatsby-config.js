@@ -110,16 +110,15 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: `gatsby-plugin-intl`,
-      options: {
-        path: `${__dirname}/src/assets/lang`,
-        languages: [`en`, `pt`],
-        defaultLanguage: `en`,
-        redirect: true,
-        // redirectComponent: require.resolve(`${__dirname}/src/components/redirect.js`),
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-intl`,
+    //   options: {
+    //     path: `${__dirname}/src/assets/lang`,
+    //     languages: [`en`, `pt`],
+    //     defaultLanguage: `pt`,
+    //     redirect: true,
+    //   },
+    // },
     {
       resolve: 'gatsby-plugin-minify-html',
       options: {

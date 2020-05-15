@@ -10,6 +10,8 @@ import { TopBar } from '../TopBar';
 
 export const Layout: FC<any> = memo(({ children, path }) => {
   const { backgroundColor } = useTheme() as any;
+  // const x = useIntl();
+  // console.log(x);
   return (
     <IntlProvider locale='pt'>
       <Grid

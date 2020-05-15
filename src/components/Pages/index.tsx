@@ -11,7 +11,6 @@ import { TextTypes } from '../Core/Text/interface';
 
 export default memo(() => {
   // if (['pt', 'pt-BR'].includes(navigator.language)) changeLocale('pt');
-
   return (
     <Flex direction='column'>
       <FormattedMessage id='title' />

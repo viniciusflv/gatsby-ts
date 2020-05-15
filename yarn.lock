@@ -861,7 +861,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.2.0", "@babel/runtime@^7.3.1", "@babel/runtime@^7.3.4", "@babel/runtime@^7.5.1", "@babel/runtime@^7.7.6":
+"@babel/runtime@^7.2.0", "@babel/runtime@^7.3.4", "@babel/runtime@^7.5.1", "@babel/runtime@^7.7.6":
   version "7.9.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.9.2.tgz#d90df0583a3a252f09aaa619665367bae518db06"
   integrity sha512-NE2DtOdufG7R5vnfQUTehdTfNycfUANEtCa9PssN9O/xmTzP4E08UI797ixaei6hBEVL9BI/PsdJS5x7mWoB9Q==
@@ -954,6 +954,13 @@
   dependencies:
     "@formatjs/intl-utils" "^2.2.2"
 
+"@formatjs/intl-displaynames@^1.2.9":
+  version "1.2.9"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-displaynames/-/intl-displaynames-1.2.9.tgz#be30523a91b3f5102fcd1754679073be6f8ee545"
+  integrity sha512-XQF2rHM0DaxShGtr03wt1eWBye0t8WDSvXfpby0ewSPs0n0uUjQOkyouTqFUderNuXV3aY8vpxq+pnHEkW/VNg==
+  dependencies:
+    "@formatjs/intl-utils" "^2.2.5"
+
 "@formatjs/intl-listformat@^1.4.1":
   version "1.4.4"
   resolved "https://registry.yarnpkg.com/@formatjs/intl-listformat/-/intl-listformat-1.4.4.tgz#87af681a3eadaa04387269f3e36b6f5b01c0e79a"
@@ -961,12 +968,33 @@
   dependencies:
     "@formatjs/intl-utils" "^2.2.2"
 
+"@formatjs/intl-listformat@^1.4.7":
+  version "1.4.7"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-listformat/-/intl-listformat-1.4.7.tgz#6529663d535ba24c1a33b26bdb4f6e0c1616466e"
+  integrity sha512-g0oXgMYhe7CFdH8jEUz64K7sLjo2p8tQAuGGXjcibODCsJvBV+YrC69WGmzQpJPCoeK5kxG7PXQRUO1Sr6NEfA==
+  dependencies:
+    "@formatjs/intl-utils" "^2.2.5"
+
 "@formatjs/intl-pluralrules@^1.5.2":
   version "1.5.5"
   resolved "https://registry.yarnpkg.com/@formatjs/intl-pluralrules/-/intl-pluralrules-1.5.5.tgz#1127d50965c5c8983845a6e9f579f86f45c51208"
   integrity sha512-GxCYbTLvlXuS6fM2IBLaVhUsINz0d1ou7f5xdbBBrm2MwbyD6rC7K8pOIIIuv97p4RsQ3twa8umI6/6P0T1/2Q==
   dependencies:
     "@formatjs/intl-utils" "^2.2.2"
+
+"@formatjs/intl-pluralrules@^1.5.8":
+  version "1.5.8"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-pluralrules/-/intl-pluralrules-1.5.8.tgz#ad8dd9ec669b8dac0e284d51772a65d92efa4ef9"
+  integrity sha512-OtL/rgKSSGljpxk2lRUC92ZqmzZjabwXO5zbBh2Bj8OM+z4U3H1Q5iK+ZY4k7a6EAoY7hWCr3F4k7EL8tcnQow==
+  dependencies:
+    "@formatjs/intl-utils" "^2.2.5"
+
+"@formatjs/intl-relativetimeformat@^4.5.15":
+  version "4.5.15"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-relativetimeformat/-/intl-relativetimeformat-4.5.15.tgz#1e31cdfc334603e380032745398186265ecc6049"
+  integrity sha512-DVtiHWMpwsuqPBtszOTmhv6m94RuiPN6/ltWCm6tul/lIFKotoJOvo1CkytfzWJ3ypjnfbYsfPRhvCCQTqVarQ==
+  dependencies:
+    "@formatjs/intl-utils" "^2.2.5"
 
 "@formatjs/intl-relativetimeformat@^4.5.9":
   version "4.5.12"
@@ -982,10 +1010,22 @@
   dependencies:
     "@formatjs/intl-utils" "^2.2.2"
 
+"@formatjs/intl-unified-numberformat@^3.3.6":
+  version "3.3.6"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-unified-numberformat/-/intl-unified-numberformat-3.3.6.tgz#ab69818f7568894023cb31fdb5b5c7eed62c6537"
+  integrity sha512-VQYswh9Pxf4kN6FQvKprAQwSJrF93eJstCDPM1HIt3c3O6NqPFWNWhZ91PLTppOV11rLYsFK11ZxiGbnLNiPTg==
+  dependencies:
+    "@formatjs/intl-utils" "^2.2.5"
+
 "@formatjs/intl-utils@^2.2.0", "@formatjs/intl-utils@^2.2.2":
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/@formatjs/intl-utils/-/intl-utils-2.2.2.tgz#adc448035c2e3f60c550bd27c97eca336e641f5a"
   integrity sha512-rKINaMRYH3FeNwYjEQwPtsA0kP2/hLLMB9mLi/QYfszz/huTqkInFmYilFRCX4oLlhFXDK5UQQMGNfEavN02Sg==
+
+"@formatjs/intl-utils@^2.2.5":
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-utils/-/intl-utils-2.2.5.tgz#eaafd94df3d102ee13e54e80f992a33868a6b1e8"
+  integrity sha512-p7gcmazKROteL4IECCp03Qrs790fZ8tbemUAjQu0+K0AaAlK49rI1SIFFq3LzDUAqXIshV95JJhRe/yXxkal5g==
 
 "@hapi/address@2.x.x":
   version "2.1.4"
@@ -6966,13 +7006,6 @@ html-minifier@^4.0.0:
     relateurl "^0.2.7"
     uglify-js "^3.5.1"
 
-html-parse-stringify2@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/html-parse-stringify2/-/html-parse-stringify2-2.0.1.tgz#dc5670b7292ca158b7bc916c9a6735ac8872834a"
-  integrity sha1-3FZwtyksoVi3vJFsmmc1rIhyg0o=
-  dependencies:
-    void-elements "^2.0.1"
-
 html-void-elements@^1.0.0, html-void-elements@^1.0.1:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/html-void-elements/-/html-void-elements-1.0.5.tgz#ce9159494e86d95e45795b166c2021c2cfca4483"
@@ -7089,13 +7122,6 @@ human-signals@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-1.1.1.tgz#c5b1cd14f50aeae09ab6c59fe63ba3395fe4dfa3"
   integrity sha512-SEQu7vl8KjNL2eoGBLF3+wAjpsNfA9XMlXAYj/3EdaNfAlxKthD1xjEQfGOUhllCGGJVNY34bRr6lPINhNjyZw==
-
-i18next@^19.4.2:
-  version "19.4.2"
-  resolved "https://registry.yarnpkg.com/i18next/-/i18next-19.4.2.tgz#5be6ebbef9cfa44a2691ab47b8ccd8cf7179cff5"
-  integrity sha512-gDctWhIgACc92Uub7vb0GTdtLKZTgiDIiBkGExOSPgqhCSyyPOb8svLxixzzSS3yMjC3fduK/BbkRt95JHwvDw==
-  dependencies:
-    "@babel/runtime" "^7.3.1"
 
 iconv-lite@0.4.24, iconv-lite@^0.4.17, iconv-lite@^0.4.24:
   version "0.4.24"
@@ -7397,12 +7423,24 @@ intl-format-cache@^4.2.21:
   resolved "https://registry.yarnpkg.com/intl-format-cache/-/intl-format-cache-4.2.24.tgz#d6a264430553db233aa444acefc4150762d603e4"
   integrity sha512-eea8rHu7ipmUilSd9+MCglgR07E+xJXmTYVFODmeLKsO3Psr/OrixDr6vWprz1whli7cwRdSc1/jHVBxrd+QBw==
 
+intl-format-cache@^4.2.27:
+  version "4.2.27"
+  resolved "https://registry.yarnpkg.com/intl-format-cache/-/intl-format-cache-4.2.27.tgz#d25fa83639913aec10ca5a8f9e3b6449bb0eacf2"
+  integrity sha512-blHXX9qBp8H6fGhQc0jHGh7j97HF0megj4rIB878iazMBdFk/tR7b3av0PJxE72TP8MycLFpeXW9vLY5cBmF4A==
+
 intl-messageformat-parser@^3.6.4:
   version "3.6.4"
   resolved "https://registry.yarnpkg.com/intl-messageformat-parser/-/intl-messageformat-parser-3.6.4.tgz#5199d106d816c3dda26ee0694362a9cf823978fb"
   integrity sha512-RgPGwue0mJtoX2Ax8EmMzJzttxjnva7gx0Q7mKJ4oALrTZvtmCeAw5Msz2PcjW4dtCh/h7vN/8GJCxZO1uv+OA==
   dependencies:
     "@formatjs/intl-unified-numberformat" "^3.2.0"
+
+intl-messageformat-parser@^5.0.3:
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/intl-messageformat-parser/-/intl-messageformat-parser-5.0.3.tgz#f281a9446b896f24a8f00ab9415019a28d59ca57"
+  integrity sha512-u2goKAXOJLkiHBy0zB3HTMuHhWDNFYUyPVevvUeSuacGFqe04jvyvYIJIoVgHD3RYhFJ9T+0UgT0dNbu+51TEw==
+  dependencies:
+    "@formatjs/intl-unified-numberformat" "^3.3.6"
 
 intl-messageformat@^7.8.4:
   version "7.8.4"
@@ -7411,6 +7449,14 @@ intl-messageformat@^7.8.4:
   dependencies:
     intl-format-cache "^4.2.21"
     intl-messageformat-parser "^3.6.4"
+
+intl-messageformat@^8.3.10:
+  version "8.3.10"
+  resolved "https://registry.yarnpkg.com/intl-messageformat/-/intl-messageformat-8.3.10.tgz#4346cf6f3a525fb69f4df2f46e804bf855ea796a"
+  integrity sha512-0CWciO3DniD8WH0FDkxLlFGAHAYrkeGT2T5sRkrmmg1xFJV64MzgmJU0AiBHbdy/2DGyOxZlba8v6xhrHAygNQ==
+  dependencies:
+    intl-format-cache "^4.2.27"
+    intl-messageformat-parser "^5.0.3"
 
 intl@^1.2.5:
   version "1.2.5"
@@ -10911,14 +10957,6 @@ react-hot-loader@^4.12.18:
     shallowequal "^1.1.0"
     source-map "^0.7.3"
 
-react-i18next@^11.3.4:
-  version "11.3.4"
-  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-11.3.4.tgz#355df5fe5133e5e30302d166f529678100ffc968"
-  integrity sha512-IRZMD7PAM3C+fJNzRbyLNi1ZD0kc3Z3obBspJjEl+9H+ME41PhVor3BpdIqv/Rm7lUoGhMjmpu42J45ooJ61KA==
-  dependencies:
-    "@babel/runtime" "^7.3.1"
-    html-parse-stringify2 "2.0.1"
-
 react-intl@^3.12.0:
   version "3.12.1"
   resolved "https://registry.yarnpkg.com/react-intl/-/react-intl-3.12.1.tgz#e9a783ea20302e9da25e4eda59e5593a43d2ec80"
@@ -10935,6 +10973,24 @@ react-intl@^3.12.0:
     intl-format-cache "^4.2.21"
     intl-messageformat "^7.8.4"
     intl-messageformat-parser "^3.6.4"
+    shallow-equal "^1.2.1"
+
+react-intl@^4.5.3:
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/react-intl/-/react-intl-4.5.3.tgz#d24774fa20aeb1049c5d8cb04f1c8d9da0efb6a8"
+  integrity sha512-qx7R7bRdmmoBbHBaQCTWIui5KcMOpUWZwe7oF83x1oLf5KJ5zm4Qt9XCGF7Ki4JbYTNuUiz7QUc4IPy0HFoMGg==
+  dependencies:
+    "@formatjs/intl-displaynames" "^1.2.9"
+    "@formatjs/intl-listformat" "^1.4.7"
+    "@formatjs/intl-relativetimeformat" "^4.5.15"
+    "@formatjs/intl-unified-numberformat" "^3.3.6"
+    "@formatjs/intl-utils" "^2.2.5"
+    "@types/hoist-non-react-statics" "^3.3.1"
+    "@types/invariant" "^2.2.31"
+    hoist-non-react-statics "^3.3.2"
+    intl-format-cache "^4.2.27"
+    intl-messageformat "^8.3.10"
+    intl-messageformat-parser "^5.0.3"
     shallow-equal "^1.2.1"
 
 react-is@^16.7.0, react-is@^16.8.1:
@@ -13586,11 +13642,6 @@ vm-browserify@^1.0.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
-
-void-elements@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-2.0.1.tgz#c066afb582bb1cb4128d60ea92392e94d5e9dbec"
-  integrity sha1-wGavtYK7HLQSjWDqkjkulNXp2+w=
 
 warning@^3.0.0:
   version "3.0.0"
