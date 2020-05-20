@@ -1,40 +1,22 @@
 import React, { FC, memo, useEffect, useState } from 'react';
 
-import { IntlProvider } from 'gatsby-plugin-intl';
+import { WrapRootElementBrowserArgs, WrapRootElementNodeArgs } from 'gatsby';
 
 import { GlobalStyle } from './style';
 
+import { RootElementArgs } from '../../../gatsby-api';
+import { Lang } from '../Lang';
 import { SEO } from '../SEO';
 import { Theme } from '../Theme';
 
-export const App: FC<any> = memo(({ loadPageSync, children }) => {
-  const [locale, setLocale] = useState('');
-  const [defaultLocale, setDefaultLocale] = useState('');
-  const [messages, setMessages] = useState({});
-
-  useEffect(() => {
-    const {
-      json: {
-        pageContext: { intl, language },
-      },
-    } = loadPageSync(window?.location?.pathname);
-
-    setLocale(language);
-    setDefaultLocale(intl.defaultLanguage);
-    setDefaultLocale(intl.messages);
-  },        []);
-
+export const App: FC<RootElementArgs> = memo(({ children, ...props }) => {
   return (
-    <IntlProvider
-      locale={locale}
-      defaultLocale={defaultLocale}
-      messages={messages}
-    >
+    <Lang {...props}>
       <Theme>
         <SEO />
         {children}
         <GlobalStyle />
       </Theme>
-    </IntlProvider>
+    </Lang>
   );
 });

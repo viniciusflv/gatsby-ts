@@ -1,6 +1,6 @@
-import React, { memo, useEffect, useState } from 'react';
+import React, { memo } from 'react';
 
-import { changeLocale, defineMessages, FormattedMessage, useIntl } from 'gatsby-plugin-intl';
+import { FormattedMessage, useIntl } from 'gatsby-plugin-intl';
 
 import assets from '../../assets';
 import { Flex } from '../Core/Flex';
@@ -10,8 +10,6 @@ import { Text } from '../Core/Text';
 import { TextTypes } from '../Core/Text/interface';
 
 export default memo(() => {
-  // if (['pt', 'pt-BR'].includes(navigator.language)) changeLocale('pt');
-
   return (
     <Flex direction='column'>
       <FormattedMessage id='title' />

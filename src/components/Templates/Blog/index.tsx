@@ -1,7 +1,6 @@
-import React, { memo, useEffect, useState } from 'react';
+import React, { memo } from 'react';
 
 import { graphql } from 'gatsby';
-import { changeLocale, useIntl } from 'gatsby-plugin-intl';
 
 import { Flex } from '../../Core/Flex';
 import { Text } from '../../Core/Text';
@@ -30,16 +29,6 @@ export default memo(
       },
     },
   }: any) => {
-    const [locale, setLocale] = useState(useIntl().locale);
-
-    useEffect(() => {
-      changeLocale(locale);
-    },        [locale]);
-
-    function toggleLocale() {
-      setLocale(locale === 'pt' ? 'en' : 'pt');
-    }
-
     return (
       <Flex
         direction='column'
@@ -49,7 +38,6 @@ export default memo(
         margin='auto'
       >
         <SEO title={title} />
-        <button onClick={toggleLocale}>Toggle Locale</button>
         <Text text={title} type={TextTypes.H1} />
         <Text text={date} type={TextTypes.P} />
         <Markdown html={html} />

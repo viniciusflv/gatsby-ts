@@ -1,21 +1,16 @@
-import React, { memo, useEffect, useState } from 'react';
+import React, { memo } from 'react';
 
-import { changeLocale, useIntl } from 'gatsby-plugin-intl';
 import { useTheme } from 'styled-components';
 
 import { TopBarModels } from './model';
 import { FixedStyle, HeaderStyle, NavStyle } from './style';
 
+import { useLang } from '../Lang/context';
+
 export const TopBar = memo(() => {
-  const [locale, setLocale] = useState(useIntl().locale);
-  const { toggleTheme } = useTheme() as any;
   const { FixedModel, HeaderModel, NavModel } = new TopBarModels();
-
-  useEffect(() => { changeLocale(locale); }, [locale]);
-
-  function toggleLocale() {
-    setLocale(locale === 'pt' ? 'en' : 'pt');
-  }
+  const { toggleTheme } = useTheme() as any;
+  const { toggleLocale } = useLang();
 
   return (
     <HeaderStyle {...HeaderModel}>
