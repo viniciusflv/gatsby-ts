@@ -12,7 +12,7 @@ import { IntlConfig } from 'gatsby-plugin-intl';
 import { App } from './src/components/App';
 import { Layout } from './src/components/Layout';
 
-type LoadPageSync = (
+export type LoadPageSync = (
   pathname: typeof window.location.pathname
 ) => {
   json: Omit<ReplaceComponentRendererArgs['props'], 'pageContext'> & {
