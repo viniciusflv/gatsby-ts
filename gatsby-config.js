@@ -117,7 +117,6 @@ module.exports = {
         languages: [`en`, `pt`],
         defaultLanguage: `en`,
         redirect: true,
-        // redirectComponent: require.resolve(`${__dirname}/src/components/redirect.js`),
       },
     },
     {

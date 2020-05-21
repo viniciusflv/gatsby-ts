@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { Fragment, memo } from 'react';
 
 import { graphql } from 'gatsby';
 
@@ -10,7 +10,9 @@ import { SEO } from '../../SEO';
 
 export const query = graphql`
   query($slug: String!, $language: String!) {
-    markdownRemark(fields: { slug: { eq: $slug }, language: { eq: $language } }) {
+    markdownRemark(
+      fields: { slug: { eq: $slug }, language: { eq: $language } }
+    ) {
       frontmatter {
         title
         date
@@ -30,18 +32,20 @@ export default memo(
     },
   }: any) => {
     return (
-      <Flex
-        direction='column'
-        grow='2'
-        maxWidth='1200px'
-        width='100%'
-        margin='auto'
-      >
+      <Fragment>
         <SEO title={title} />
-        <Text text={title} type={TextTypes.H1} />
-        <Text text={date} type={TextTypes.P} />
-        <Markdown html={html} />
-      </Flex>
+        <Flex
+          direction='column'
+          grow='2'
+          maxWidth='1200px'
+          width='100%'
+          margin='auto'
+        >
+          <Text text={title} type={TextTypes.H1} />
+          <Text text={date} type={TextTypes.P} />
+          <Markdown html={html} />
+        </Flex>
+      </Fragment>
     );
   }
 );

@@ -1,5 +1,5 @@
 ---
-title: 'Blog React'
+title: 'React EN'
 date: '25-03-2018'
 lang: 'en'
 ---

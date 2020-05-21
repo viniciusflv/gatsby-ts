@@ -31,6 +31,7 @@ export function useHooks(loadPageSync: LoadPageSync) {
   }
 
   return {
+    locale: locale ?? navigatorLocale,
     toggleLocale,
     navigatorLocale,
     messages,

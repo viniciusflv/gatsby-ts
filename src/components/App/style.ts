@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     min-height: 100%;
     width: 100%;
     height: 100%;
-    background-color: ${({ theme }) => theme.primaryColor};
+    background-color: ${({ theme }) => theme.backgroundColor};
   }
 
   #___gatsby, #gatsby-focus-wrapper {
@@ -38,6 +38,5 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
 
   ::-webkit-scrollbar-thumb {
     background-color: ${({ theme }) => theme.secondaryColor};
-    border-radius: 8px;
   }
 `;

@@ -9,6 +9,7 @@ import { RootElementArgs } from '../../../gatsby-api';
 
 export const Lang: FC<RootElementArgs> = memo(({ children, loadPageSync }) => {
   const {
+    locale,
     toggleLocale,
     navigatorLocale,
     messages,
@@ -21,7 +22,7 @@ export const Lang: FC<RootElementArgs> = memo(({ children, loadPageSync }) => {
       messages={messages}
       defaultLocale={defaultLocale}
     >
-      <LangProvider value={{ toggleLocale }}>{children}</LangProvider>
+      <LangProvider value={{ toggleLocale, locale }}>{children}</LangProvider>
     </IntlProvider>
   );
 });

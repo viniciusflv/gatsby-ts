@@ -76,7 +76,7 @@ const CodeStyle = styled.section`
   }
 
   .token.punctuation {
-    color: ${({ theme }) => theme.code.commentColor};
+    color: ${({ theme }) => theme.code.punctuationColor};
   }
 
   .token.namespace {

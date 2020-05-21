@@ -37,7 +37,7 @@ export const light: ThemeType = {
     weight: 'normal',
     family: 'Montserrat, arial, sans-serif',
   },
-  primaryColor: '#ae81ff',
+  primaryColor: 'rgb(40,41,54)',
   secondaryColor: '#6272a4',
   backgroundColor: '#f0f0f0',
   code: {
@@ -48,7 +48,7 @@ export const light: ThemeType = {
     color: 'rgb(40,41,54)',
     backgroundColor: '#ffffff',
     commentColor: 'rgba(98, 114, 164, 1)',
-    punctuationColor: '#f8f8f2',
+    punctuationColor: 'rgba(98, 114, 164, 1)',
     parameterColor: 'rgb(255,121,86)',
     boolNumberColor: '#ae81ff',
     stringColor: '#6272a4',

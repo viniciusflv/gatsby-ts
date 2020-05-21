@@ -1,9 +1,5 @@
 {
   "title": "Gatsby with Typescript",
   "description": "Gatsby with Typescript",
-  "keywords": "gatsby typescript setup",
-  "titles": [
-    ["/", "Home"],
-    ["/blog/", "Blog"]
-  ]
+  "keywords": "gatsby typescript setup"
 }
